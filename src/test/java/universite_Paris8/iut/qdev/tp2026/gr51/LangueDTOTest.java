@@ -4,7 +4,6 @@ import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.CsvSource;
-import universite_Paris8.iut.qdev.tp2026.gr51.communs.dtos.LangueDTO;
 
 import static org.junit.jupiter.api.Assertions.*;
 
