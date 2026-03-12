@@ -1,6 +1,9 @@
 package universite_Paris8.iut.qdev.tp2026.gr51.communs.dtos;
 
+import universite_paris8.iut.qdev.tp2026.gr51.communs.enums.Langue;
+
 import java.time.LocalDate;
+import java.util.List;
 
 /**
  * DTO représentant un joueur.
@@ -17,20 +20,20 @@ public class JoueurDTO {
     private int score;               // entier relatif, initialisé à 0
     private LocalDate anneeNaissance;
     private String email;            // doit contenir un '@', obligatoire
-    private CentreInteretDTO centreInteret;
-    private LangueDTO langue;
+    private List<CentreInteretDTO> centreInterets;
+    private Langue langue;
 
     public JoueurDTO() {}
 
     public JoueurDTO(String pseudo, String prenom, int score,
                      LocalDate anneeNaissance, String email,
-                     CentreInteretDTO centreInteret, LangueDTO langue) {
+                     List<CentreInteretDTO> centresInterets, Langue langue) {
         this.pseudo = pseudo;
         this.prenom = prenom;
         this.score = score;
         this.anneeNaissance = anneeNaissance;
         this.email = email;
-        this.centreInteret = centreInteret;
+        this.centreInterets = centresInterets;
         this.langue = langue;
     }
 
@@ -49,11 +52,11 @@ public class JoueurDTO {
     public String getEmail() { return email; }
     public void setEmail(String email) { this.email = email; }
 
-    public CentreInteretDTO getCentreInteret() { return centreInteret; }
-    public void setCentreInteret(CentreInteretDTO centreInteret) { this.centreInteret = centreInteret; }
+    public List<CentreInteretDTO> getCentreInterets() { return centreInterets; }
+    public void setCentreInterets(List<CentreInteretDTO> centreInterets) { this.centreInterets = centreInterets; }
 
-    public LangueDTO getLangue() { return langue; }
-    public void setLangue(LangueDTO langue) { this.langue = langue; }
+    public Langue getLangue() { return langue; }
+    public void setLangue(Langue langue) { this.langue = langue; }
 
     @Override
     public String toString() {
