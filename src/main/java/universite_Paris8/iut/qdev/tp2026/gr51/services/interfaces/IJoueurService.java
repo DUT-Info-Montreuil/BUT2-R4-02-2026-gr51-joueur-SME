@@ -6,6 +6,7 @@ import universite_Paris8.iut.qdev.tp2026.gr51.utils.exceptions.AnneeNaissanceInv
 import universite_Paris8.iut.qdev.tp2026.gr51.utils.exceptions.EmailInvalideException;
 import universite_Paris8.iut.qdev.tp2026.gr51.utils.exceptions.JoueurIntrouvableException;
 import universite_Paris8.iut.qdev.tp2026.gr51.utils.exceptions.PseudoDejaUtiliseException;
+import universite_Paris8.iut.qdev.tp2026.gr51.communs.enums.LangueEnum;
 
 import java.util.List;
 
@@ -36,7 +37,7 @@ public interface IJoueurService {
      * @throws AnneeNaissanceInvalideException si l'année de naissance est hors plage
      */
     JoueurDTO ajouterJoueur(String pseudo, String prenom, int anneeNaissance,
-                            String email, List<CentreInteretDTO> centresInterets, universite_paris8.iut.qdev.tp2026.gr51.communs.enums.LangueEnum langueEnum)
+                            String email, List<CentreInteretDTO> centresInterets, LangueEnum langueEnum)
             throws PseudoDejaUtiliseException, EmailInvalideException, AnneeNaissanceInvalideException;
 
     /**
