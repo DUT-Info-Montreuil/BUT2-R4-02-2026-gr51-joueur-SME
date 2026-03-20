@@ -2,7 +2,6 @@ package universite_Paris8.iut.qdev.tp2026.gr51.services.interfaces;
 
 import universite_Paris8.iut.qdev.tp2026.gr51.communs.dtos.CentreInteretDTO;
 import universite_Paris8.iut.qdev.tp2026.gr51.communs.dtos.JoueurDTO;
-import universite_paris8.iut.qdev.tp2026.gr51.communs.enums.Langue;
 import universite_Paris8.iut.qdev.tp2026.gr51.utils.exceptions.AnneeNaissanceInvalideException;
 import universite_Paris8.iut.qdev.tp2026.gr51.utils.exceptions.EmailInvalideException;
 import universite_Paris8.iut.qdev.tp2026.gr51.utils.exceptions.JoueurIntrouvableException;
@@ -30,14 +29,14 @@ public interface IJoueurService {
      * @param anneeNaissance   année de naissance (plage : annéeCourante-100 à annéeCourante-7)
      * @param email            adresse email (doit contenir un '@'), peut être null/vide
      * @param centresInterets  liste des centres d'intérêt (peut être vide)
-     * @param langue           langue préférée du joueur
+     * @param langueEnum           langue préférée du joueur
      * @return le {@link JoueurDTO} créé
      * @throws PseudoDejaUtiliseException      si le pseudo est déjà utilisé
      * @throws EmailInvalideException          si l'email ne contient pas de '@'
      * @throws AnneeNaissanceInvalideException si l'année de naissance est hors plage
      */
     JoueurDTO ajouterJoueur(String pseudo, String prenom, int anneeNaissance,
-                            String email, List<CentreInteretDTO> centresInterets, Langue langue)
+                            String email, List<CentreInteretDTO> centresInterets, universite_paris8.iut.qdev.tp2026.gr51.communs.enums.LangueEnum langueEnum)
             throws PseudoDejaUtiliseException, EmailInvalideException, AnneeNaissanceInvalideException;
 
     /**

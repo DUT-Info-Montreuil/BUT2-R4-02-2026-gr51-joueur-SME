@@ -1,6 +1,6 @@
-package universite_paris8.iut.qdev.tp2026.gr51.communs.enums;
+package universite_Paris8.iut.qdev.tp2026.gr51.communs.enums;
 
-public enum Langue {
+public enum LangueEnum {
 
     FR(1, "fr", "Français"),
     EN(2, "en", "English"),
@@ -12,7 +12,7 @@ public enum Langue {
     private final String code;
     private final String nom;
 
-    Langue(int id, String code, String nom) {
+    LangueEnum(int id, String code, String nom) {
         this.id = id;
         this.code = code;
         this.nom = nom;
@@ -30,15 +30,15 @@ public enum Langue {
         return nom;
     }
 
-    public static Langue fromId(int id) {
-        for (Langue l : values()) {
+    public static universite_Paris8.iut.qdev.tp2026.gr51.communs.enums.LangueEnum fromId(int id) {
+        for (universite_Paris8.iut.qdev.tp2026.gr51.communs.enums.LangueEnum l : values()) {
             if (l.id == id) return l;
         }
         throw new IllegalArgumentException("Id de langue inconnu : " + id);
     }
 
-    public static Langue fromCode(String code) {
-        for (Langue l : values()) {
+    public static universite_Paris8.iut.qdev.tp2026.gr51.communs.enums.LangueEnum fromCode(String code) {
+        for (universite_Paris8.iut.qdev.tp2026.gr51.communs.enums.LangueEnum l : values()) {
             if (l.code.equalsIgnoreCase(code)) return l;
         }
         throw new IllegalArgumentException("Code de langue inconnu : " + code);

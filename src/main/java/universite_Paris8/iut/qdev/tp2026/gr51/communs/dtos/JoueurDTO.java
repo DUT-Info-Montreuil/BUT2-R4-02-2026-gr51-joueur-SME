@@ -1,7 +1,5 @@
 package universite_Paris8.iut.qdev.tp2026.gr51.communs.dtos;
 
-import universite_paris8.iut.qdev.tp2026.gr51.communs.enums.Langue;
-
 import java.time.LocalDate;
 import java.util.List;
 
@@ -21,20 +19,20 @@ public class JoueurDTO {
     private LocalDate anneeNaissance;
     private String email;            // doit contenir un '@', obligatoire
     private List<CentreInteretDTO> centreInterets;
-    private Langue langue;
+    private universite_paris8.iut.qdev.tp2026.gr51.communs.enums.LangueEnum langueEnum;
 
     public JoueurDTO() {}
 
     public JoueurDTO(String pseudo, String prenom, int score,
                      LocalDate anneeNaissance, String email,
-                     List<CentreInteretDTO> centresInterets, Langue langue) {
+                     List<CentreInteretDTO> centresInterets, universite_paris8.iut.qdev.tp2026.gr51.communs.enums.LangueEnum langueEnum) {
         this.pseudo = pseudo;
         this.prenom = prenom;
         this.score = score;
         this.anneeNaissance = anneeNaissance;
         this.email = email;
         this.centreInterets = centresInterets;
-        this.langue = langue;
+        this.langueEnum = langueEnum;
     }
 
     public String getPseudo() { return pseudo; }
@@ -55,8 +53,8 @@ public class JoueurDTO {
     public List<CentreInteretDTO> getCentreInterets() { return centreInterets; }
     public void setCentreInterets(List<CentreInteretDTO> centreInterets) { this.centreInterets = centreInterets; }
 
-    public Langue getLangue() { return langue; }
-    public void setLangue(Langue langue) { this.langue = langue; }
+    public universite_paris8.iut.qdev.tp2026.gr51.communs.enums.LangueEnum getLangue() { return langueEnum; }
+    public void setLangue(universite_paris8.iut.qdev.tp2026.gr51.communs.enums.LangueEnum langueEnum) { this.langueEnum = langueEnum; }
 
     @Override
     public String toString() {
